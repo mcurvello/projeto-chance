@@ -1,0 +1,1 @@
+INSERT INTO tb_company (area1, area2, company_defiance, email, password, username) VALUES ('MANAGEMENT', 'DESIGN', 'XXX', 'email@xxx.com', '123456', 'xyz');

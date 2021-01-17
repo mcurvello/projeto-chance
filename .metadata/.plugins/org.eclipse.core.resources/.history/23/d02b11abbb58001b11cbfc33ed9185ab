@@ -1,0 +1,28 @@
+package com.ccr.chance.services;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ccr.chance.dto.DefianceDTO;
+import com.ccr.chance.entities.Defiance;
+import com.ccr.chance.repositories.DefianceRepository;
+
+@Service
+public class DefianceService {
+	@Autowired
+	private DefianceRepository repository;
+	
+	
+	@Transactional(readOnly = true)
+	public List<DefianceDTO> findAll(){
+		
+		List<Defiance> list = repository.findAllByOrderByIdAsc();
+		return list.stream().map(x -> new DefianceDTO(x)).collect(Collectors.toList());
+	}
+	
+}
+

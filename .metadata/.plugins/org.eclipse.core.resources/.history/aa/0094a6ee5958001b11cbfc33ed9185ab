@@ -1,0 +1,5 @@
+package com.ccr.chance.config;
+
+public class SecurityConfig {
+
+}

@@ -1,0 +1,46 @@
+package com.ccr.chance.dto;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ccr.chance.entities.InterestArea;
+import com.ccr.chance.entities.User;
+
+public class UserDTO {
+
+	private Long id;
+	private String name;
+	private String email;
+	private String username;
+	private String password;
+	private InterestArea area1;
+	private InterestArea area2;
+	
+	private List<CompanyDTO> company = new ArrayList<>();
+	
+	public UserDTO() {
+		
+	}
+
+	public UserDTO(Long id, String name, String email, String username, String password, InterestArea area1,
+			InterestArea area2) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+		this.area1 = area1;
+		this.area2 = area2;
+	}
+	
+	public UserDTO(User entity) {
+		id = entity.getId();
+		name = entity.getName();
+		email = entity.getEmail();
+		username = entity.getUsername();
+		password = entity.getPassword();
+		area1 = entity.getArea1();
+		area2 = entity.getArea2();
+	}
+	
+}

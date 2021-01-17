@@ -1,0 +1,5 @@
+package com.ccr.chance.dto;
+
+public class CompanyDTO {
+
+}

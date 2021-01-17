@@ -1,0 +1,47 @@
+package com.ccr.chance.dto;
+
+import com.ccr.chance.entities.Company;
+import com.ccr.chance.entities.Defiance;
+import com.ccr.chance.entities.InterestArea;
+
+public class CompanyDTO {
+	
+	private Long id;
+	private String name;
+	private String email;
+	private String username;
+	private String password;
+	private InterestArea area1;
+	private InterestArea area2;
+	private Defiance companyDefiance;
+	
+	public CompanyDTO() {
+		
+	}
+
+	public CompanyDTO(Long id, String name, String email, String username, String password, InterestArea area1,
+			InterestArea area2, Defiance companyDefiance) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+		this.area1 = area1;
+		this.area2 = area2;
+		this.companyDefiance = companyDefiance;
+	}
+	
+	public CompanyDTO(Company company) {
+		super();
+		id = company.getId();
+		name = company.getName();
+		email = company.getEmail();
+		username = company.getUsername();
+		password = company.getPassword();
+		area1 = company.getArea1();
+		area2 = company.getArea2();
+		companyDefiance = company.getCompanyDefiance();
+	}
+	
+}
